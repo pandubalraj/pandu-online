@@ -1,7 +1,15 @@
 PanduOnline::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
-
+   match '/about_us' => 'home#about_us'
+   match '/contact_us' => 'home#contact_us'
+   match '/gallery' => 'home#gallery'
+   match '/faq' => 'home#faq'
+   match '/home' => 'home#home'
+   match '/volunteers' => 'home#volunteers'
+   match '/donars' => 'home#donars'
+   match '/sponsors' => 'home#sponsors'
+   match '/events' => 'home#events'
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
@@ -48,7 +56,7 @@ PanduOnline::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+   root :to => 'home#home'
 
   # See how all your routes lay out with "rake routes"
 
